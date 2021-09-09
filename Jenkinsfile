@@ -4,7 +4,7 @@ agent any
 stages
 {
  stage ('code scm checkout')
- { steps {  git branch: 'master', url: 'https://github.com/prakashk0301/gradle-calculator'   } }
+ { steps {  git branch: 'master', url: 'https://github.com/Amfaa/gradle-calculator.git'   } }
 
  stage ('code build')
 
