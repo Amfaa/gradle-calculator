@@ -8,7 +8,7 @@ stages
 
  stage ('code build')
 
- {   steps { { withGradle {
+ {   steps {  withGradle {
                             sh './gradlew clean'
                               './gradlew assemble'
                                './gradlew build'
