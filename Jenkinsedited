@@ -6,22 +6,16 @@ stages
  stage ('code scm checkout')
  { steps {  git branch: 'master', url: 'https://github.com/Amfaa/gradle-calculator.git'   } }
 
- stage ('code build')
+ stage ('assemble && code build')
 
  {   steps {  withGradle {
                             sh './gradlew clean'
                               './gradlew assemble'
                                './gradlew build'
                                  './gradlew jar'
-                           }
-               }
-            }
-
- 
- stage ('code test')
-
- {   steps { sh './gradlew test'  }}
- 
-}
-
-}
+                          }
+             }
+    }
+                           
+    }
+    }
